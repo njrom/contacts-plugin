@@ -7,4 +7,15 @@ export class ContactPluginWeb extends WebPlugin implements ContactPluginPlugin {
     console.log('ECHO', options);
     return options;
   }
+
+  async getContacts(filter: string): Promise<{ results: any[]}> {
+    console.log('Filter: ', filter);
+    return {
+      results: [{
+        firstName: 'Dummy',
+        lastName: 'Entry',
+        telephone: '123456'
+      }]
+    };
+  }
 }
